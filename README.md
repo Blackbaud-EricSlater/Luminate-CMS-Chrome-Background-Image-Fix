@@ -28,11 +28,9 @@ load so there is negligable performance impact on visitors.
 ## Installation
 
 1. Upload this script to a web-accessible location. Probably, your Luminate CMS host.
-
 2. Install this script in the footer of your CMS Wrapper beneath all external stylesheet
    LINK tags as close to the </body> tag as possible.
-
-3. Rejoice! Your site will now properly display background images in Chrome
+3. Rejoice! Your site will now properly display background images in Chrome.
 
 ## Licensing
 
