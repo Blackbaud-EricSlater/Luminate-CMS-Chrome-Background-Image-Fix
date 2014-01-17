@@ -1,0 +1,1 @@
+(function(){var a;if(a=void 0!==window.chrome)""==getCookie("lcms_chrome_bg_fix_ran")?(setCookie("lcms_chrome_bg_fix_ran","true",1),a=!0):a=!1;if(a){a=document.querySelectorAll('link[rel="stylesheet"]');for(var d=document.getElementsByTagName("body")[0],b=0;b<a.length;b++){var c=a[b].cloneNode();c.rel="prefetch";d.appendChild(c);c.rel="stylesheet"}}})();
