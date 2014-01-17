@@ -19,11 +19,11 @@ appending them to the `HEAD` element then switching their `rel` back to `stylesh
 This approach causes Chrome to reprocess the stylesheets without redownloading them,
 which is beneficial from a performance perspective.
 
-To ease implementation across the various Luminate CMS client architectures this 
-script does not rely on any third-party libraries (e.x. jQuery). Also, all logic 
-is wrapped in an immediately invoked function expression to protect the global scope. 
-Further, the core logic is only invoked in Google Chrome and only on the initial page
-load so there is negligable performance impact on visitors.
+To ease implementation across the various Luminate CMS client architectures, this script 
+does not rely on any third-party libraries (e.x. jQuery). Also, all logic is wrapped in 
+an immediately invoked function expression to protect the global scope. Further, the core 
+logic is only invoked in Google Chrome and only on the initial page load so there is 
+negligible performance impact on
 
 ## Installation
 
