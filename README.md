@@ -27,7 +27,7 @@ negligible performance impact.
 
 ## Special Note
 
-Stylesheets which are included dynamically or via `STYLE` tag @import commands will not be
+Stylesheets which are included dynamically or via `<style>@import ...</style>` will not be
 processed by this script and therefore will not benefit from the aforementioned fix.
 
 ## Installation
