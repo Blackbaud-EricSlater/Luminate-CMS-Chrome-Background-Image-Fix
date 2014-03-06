@@ -14,7 +14,7 @@ displaying background images defined in external stylesheets. This is most likel
 to a caching anomoly.
 
 This script prompts Chrome to reprocess stylesheets after the aforementioned redirects by
-cloning all LINK elements on the page, changing their `rel` attributes to `prefetch`,
+cloning all `LINK` elements on the page, changing their `rel` attributes to `prefetch`,
 appending them to the `HEAD` element then switching their `rel` back to `stylesheet`.
 This approach causes Chrome to reprocess the stylesheets without redownloading them,
 which is beneficial from a performance perspective.
@@ -23,7 +23,12 @@ To ease implementation across the various Luminate CMS client architectures, thi
 does not rely on any third-party libraries (e.x. jQuery). Also, all logic is wrapped in 
 an immediately invoked function expression to protect the global scope. Further, the core 
 logic is only invoked in Google Chrome and only on the initial page load so there is 
-negligible performance impact on
+negligible performance impact.
+
+## Special Note
+
+Stylesheets which are included dynamically or via `STYLE` tag @import commands will not be
+processed by this script and therefore will not benefit from the aforementioned fix.
 
 ## Installation
 
