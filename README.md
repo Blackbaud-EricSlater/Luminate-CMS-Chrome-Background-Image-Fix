@@ -22,8 +22,8 @@ which is beneficial from a performance perspective.
 To ease implementation across the various Luminate CMS client architectures, this script 
 does not rely on any third-party libraries (e.x. jQuery). Also, all logic is wrapped in 
 an immediately invoked function expression to protect the global scope. Further, the core 
-logic is only invoked in Google Chrome and only on the initial page load so there is 
-negligible performance impact.
+logic is only invoked in Google Chrome and only when session synchronization between CMS
+and Luminate Online is performed so there is so there is negligible performance impact.
 
 ## Special Note
 
