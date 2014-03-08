@@ -23,7 +23,7 @@ To ease implementation across the various Luminate CMS client architectures, thi
 does not rely on any third-party libraries (e.x. jQuery). Also, all logic is wrapped in 
 an immediately invoked function expression to protect the global scope. Further, the core 
 logic is only invoked in Google Chrome and only when session synchronization between CMS
-and Luminate Online is performed so there is so there is negligible performance impact.
+and Luminate Online is performed so there is negligible performance impact.
 
 ## Special Note
 
