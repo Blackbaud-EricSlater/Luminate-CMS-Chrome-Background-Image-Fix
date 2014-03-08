@@ -15,7 +15,7 @@ to a caching anomoly.
 
 This script prompts Chrome to reprocess stylesheets after the aforementioned redirects by
 cloning all `LINK` elements on the page, changing their `rel` attributes to `prefetch`,
-appending them to the `HEAD` element then switching their `rel` back to `stylesheet`.
+adding them to the `HEAD` element then switching their `rel` back to `stylesheet`.
 This approach causes Chrome to reprocess the stylesheets without redownloading them,
 which is beneficial from a performance perspective.
 
