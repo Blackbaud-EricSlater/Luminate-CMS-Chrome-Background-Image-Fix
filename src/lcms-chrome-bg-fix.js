@@ -2,7 +2,7 @@
  * Name: Luminate CMS Chrome Background Fix
  * Author: DNL Omnimedia Inc. <info@dnlomnimedia.com>
  * Date: 1/15/2014
- * Version: .91
+ * Version: .95
  * Copyright: 2014 DNL OmniMedia Inc.
  * License: The MIT License (MIT)
  *
@@ -32,11 +32,10 @@
     // switch on the existing stylesheets this approach does not cause the site to lose all of
     // its styles and become temporarily unstyled. Che bella!
     function injectPrefetches(stylesheets) {
-        var head = document.getElementsByTagName('body')[0];
         for(var i=0; i<stylesheets.length; i++) {
             var clone = stylesheets[i].cloneNode();
             clone.rel = "prefetch";
-            head.appendChild(clone);
+            insertAfter(stylesheets[i], clone);
             clone.rel = "stylesheet";
         }
     }
@@ -44,6 +43,11 @@
     // Return the current session ID. If one does not exist then `undefined` is returned.
     function getSessionId() {
         return (CONVIO || {}).pageSessionID;
+    }
+
+    // Inserts `newNode` after `referenceNode` in the DOM. 
+    function insertAfter(referenceNode, newNode) {
+        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
     }
 
     // Determine whether the Luminate session has changed since the previous page load
