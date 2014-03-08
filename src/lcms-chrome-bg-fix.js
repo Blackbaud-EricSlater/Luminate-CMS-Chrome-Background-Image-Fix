@@ -41,12 +41,23 @@
         }
     }
 
+    // Return the current session ID. If one does not exist then `undefined` is returned.
+    function getSessionId() {
+        return (CONVIO || {}).pageSessionID;
+    }
+
     // Determine whether the Luminate session has changed since the previous page load
     function sessionChanged() {
-    	var cookie = getCookie(cookieName);
-    	var sessionId = (CONVIO || {}).pageSessionID;
+        // Get the last session ID encountered. This will be `undefined` on the first page load.
+        // Otherwise, it will be a String.
+    	var prevSessionId = getCookie(cookieName);
 
-    	if(cookie == sessionId) {
+        // Get the current session ID
+    	var sessionId = getSessionId();
+
+        // If the previous session ID equals the current session ID then return FALSE. Else, cookie
+        // the new session ID and return TRUE.
+    	if(prevSessionId == sessionId) {
     		return false;
     	} else {
     		setCookie(cookieName, sessionId, 1000);
