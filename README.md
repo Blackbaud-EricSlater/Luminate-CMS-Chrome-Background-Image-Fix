@@ -11,7 +11,7 @@ Luminate CMS automatically initiates an asynchronous redirect for new visitors i
 to create a standardized session between Luminate CMS and Luminate Online. This
 redirect action prevents modern versions of Google Chrome from processing and
 displaying background images defined in external stylesheets. This is most likely due
-to a caching anomoly.
+to a caching anomaly.
 
 This script prompts Chrome to reprocess stylesheets after the aforementioned redirects by
 cloning all `LINK` elements on the page, changing their `rel` attributes to `prefetch`,
@@ -20,7 +20,7 @@ This approach causes Chrome to reprocess the stylesheets without redownloading t
 which is beneficial from a performance perspective.
 
 To ease implementation across the various Luminate CMS client architectures, this script 
-does not rely on any third-party libraries (e.x. jQuery). Also, all logic is wrapped in 
+does not rely on any third-party libraries (ex. jQuery). Also, all logic is wrapped in 
 an immediately invoked function expression to protect the global scope. Further, the core 
 logic is only invoked in Google Chrome and only when session synchronization between CMS
 and Luminate Online is performed so there is negligible performance impact.
